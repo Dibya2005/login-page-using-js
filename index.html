@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form with Validation</title>
+    
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Create Your Account</h1>
+            <p>Join our community today</p>
+        </div>
+        
+        <div class="form-container">
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name">
+                    <div class="error" id="nameError">Please enter your full name</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
+                    <div class="error" id="emailError">Please enter a valid email address</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-icon">
+                        <input type="password" id="password" name="password" placeholder="Create a strong password">
+                        <i class="password-toggle" id="togglePassword">👁️</i>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-meter" id="passwordStrength"></div>
+                    </div>
+                    <div class="error" id="passwordError">Password must be at least 8 characters with uppercase, lowercase, number, and special character</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-icon">
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password">
+                        <i class="password-toggle" id="toggleConfirmPassword">👁️</i>
+                    </div>
+                    <div class="error" id="confirmPasswordError">Passwords do not match</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+                    <textarea id="message" name="message" placeholder="Tell us about yourself..."></textarea>
+                    <div class="success" id="messageSuccess">Great! You've added a personal message</div>
+                </div>
+                
+                <button type="submit" class="btn">Create Account</button>
+            </form>
+            
+            <div class="form-footer">
+                Already have an account? <a href="#">Sign In</a>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
